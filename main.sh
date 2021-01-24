@@ -213,9 +213,9 @@ EOF
 echo "> install AUR packages"
 
 cat << EOF | arch-chroot /mnt/
-  curl -k https://87.165.150.141/Finn/Arch/raw/branch/master/packages/gnome-shell-extension-dash-to-panel-40-1-any.pkg.tar.zst -o /home/xenox/dash.pkg.tar.zst
-  curl -k https://87.165.150.141/Finn/Arch/raw/branch/master/packages/gnome-shell-extension-arc-menu-48.2-1-any.pkg.tar.zst -o /home/xenox/menu.pkg.tar.zst
-  curl -k https://87.165.150.141/Finn/Arch/raw/branch/master/packages/gnome-shell-extension-appindicator-34-1-any.pkg.tar.zst -o /home/xenox/tray.pkg.tar.zst
+  curl https://raw.githubusercontent.com/finn-liebner/archium/master/pkg/gnome-shell-extension-dash-to-panel-40-1-any.pkg.tar.zst -o /home/xenox/dash.pkg.tar.zst
+  curl https://raw.githubusercontent.com/finn-liebner/archium/master/pkg/gnome-shell-extension-arc-menu-48.2-1-any.pkg.tar.zst -o /home/xenox/menu.pkg.tar.zst
+  curl https://raw.githubusercontent.com/finn-liebner/archium/master/pkg/gnome-shell-extension-appindicator-34-1-any.pkg.tar.zst -o /home/xenox/tray.pkg.tar.zst
   gnome-extensions list
   pacman --noconfirm -U /home/xenox/dash.pkg.tar.zst
   pacman --noconfirm -U /home/xenox/menu.pkg.tar.zst
